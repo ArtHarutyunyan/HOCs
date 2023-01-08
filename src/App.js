@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
-import CommentList from "./CommentList ";
-import withSubscription from "./withSubscription";
-import { DataSource } from "react";
+import BlogPost from "./components/BlogPost";
+import CommentList from "./components/CommentList ";
+import withSubscription from "./hocs/withSubscription";
 
 const CommentListWithSubscription = withSubscription(
   CommentList,
@@ -16,7 +15,10 @@ const BlogPostWithSubscription = withSubscription(
 function App() {
   return (
     <div className="App">
-      <CommentList />
+      <h2>this is comment</h2>
+      <CommentListWithSubscription />
+      <h2>this is BlogPost</h2>
+      <BlogPostWithSubscription id={4} />
     </div>
   );
 }
